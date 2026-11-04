@@ -40,3 +40,9 @@ function study(canvas,type){
 }
 document.querySelectorAll('[data-scene]').forEach(canvas=>study(canvas,canvas.dataset.scene));
 
+// Visual explanations remain optional: the accompanying labels work without interaction.
+const conflictToggle=document.querySelector('#conflict-toggle');
+conflictToggle.addEventListener('click',()=>{const on=conflictToggle.getAttribute('aria-pressed')!=='true';conflictToggle.setAttribute('aria-pressed',String(on));document.querySelector('.calendar-wrap').classList.toggle('conflicted',on);document.querySelector('#calendar-state').textContent=on?'Time conflict':'No overlap';conflictToggle.textContent=on?'Restore the schedule':'Show a time conflict';document.querySelector('.course-b small').textContent=on?'09:15–10:15':'11:00–12:00'});
+const pointGroup=document.querySelector('#rail-points');
+for(let i=0;i<160;i++){const circle=document.createElementNS('http://www.w3.org/2000/svg','circle');const x=295+(i%16)*12,y=135+Math.floor(i/16)*9;circle.setAttribute('cx',String(x));circle.setAttribute('cy',String(y+(x-295)*.15));circle.setAttribute('r','1.8');circle.setAttribute('fill',i%4===0?'#b55d3a':'#627852');pointGroup.append(circle)}
+document.querySelectorAll('[data-rail]').forEach(button=>button.addEventListener('click',()=>{const mode=button.dataset.rail;document.querySelectorAll('[data-rail]').forEach(b=>{const selected=b===button;b.classList.toggle('active',selected);b.setAttribute('aria-pressed',String(selected))});document.querySelector('#rail-geometry').setAttribute('opacity',mode==='scene'?'1':'.16');pointGroup.setAttribute('opacity',mode==='scene'?'0':'1');document.querySelector('#rail-label').setAttribute('opacity',mode==='labels'?'1':'0')}));

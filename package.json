@@ -1,1 +1,1 @@
-{"name":"qingyuan-tian-portfolio","private":true,"version":"1.0.0","type":"module","scripts":{"dev":"node serve.mjs","start":"node serve.mjs"},"engines":{"node":">=18"}}
+{"name":"qingyuan-tian-portfolio","private":true,"version":"1.0.0","type":"module","scripts":{"dev":"node serve.mjs","start":"node serve.mjs"},"engines":{"node":">=18"},"dependencies":{"@vercel/analytics":"^2.0.1"}}

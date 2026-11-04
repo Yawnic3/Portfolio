@@ -41,3 +41,33 @@
 .workshop-controls #generate-scene.demo-invite.demo-visible{animation-play-state:running}
 @keyframes demo-invite-strong{0%,100%{transform:translateY(0) scale(1);background:#b4f1d9;box-shadow:0 4px 0 #26716b,0 0 0 0 #b4f1d9aa}45%{transform:translateY(-4px) scale(1.045);background:#edfff4;box-shadow:0 7px 0 #26716b,0 0 0 13px #b4f1d940}75%{box-shadow:0 4px 0 #26716b,0 0 0 21px #b4f1d900}}
 @media(prefers-reduced-motion:reduce){.workshop-controls #generate-scene.demo-invite{animation:none}}
+/* Distinct project identities within the shared night landscape. */
+#railway{--project-bg:#221c35;--project-panel:#2d2644;--project-line:#6d5a94;--project-accent:#d1b5ff;--project-copy:#e6def3;--accent:#d1b5ff;--tint:#302745}
+#marine{--project-bg:#2d251c;--project-panel:#393022;--project-line:#8b7048;--project-accent:#f0cb87;--project-copy:#eee3ce;--accent:#f0cb87;--tint:#3a3022}
+#gatorplan{--project-bg:#102b44;--project-panel:#173b59;--project-line:#477b9e;--project-accent:#8ed1ff;--project-copy:#dbeaf5;--accent:#8ed1ff;--tint:#173b59}
+:is(#railway,#marine,#gatorplan){background:var(--project-bg);border:1px solid var(--project-line);border-left:5px solid var(--project-accent);padding:28px;margin-bottom:28px;border-radius:6px;box-shadow:none}
+:is(#railway,#marine,#gatorplan)>h2{color:var(--project-accent)}
+:is(#railway,#marine,#gatorplan) .case-summary{color:var(--project-copy)}
+:is(#railway,#marine,#gatorplan) .project-number{color:var(--project-accent)}
+:is(#railway,#marine,#gatorplan) .project-technologies{border-color:var(--project-line)}
+:is(#railway,#marine,#gatorplan) .tech-tag{color:var(--project-copy)}
+:is(#railway,#marine,#gatorplan) :is(.architecture,.langgraph-design,.marine-tools){background:var(--project-bg);border-color:var(--project-line)}
+:is(#railway,#marine,#gatorplan) :is(.diagram-heading,.graph-node,.workshop-controls,.dataset-modes,.modality-strip){background:var(--project-panel);border-color:var(--project-line)}
+:is(#railway,#marine,#gatorplan) :is(.diagram-heading h3,.graph-node strong,.graph-arrow,.embed-heading,.lg-heading h3){color:var(--project-accent)}
+:is(#railway,#marine,#gatorplan) .graph-node.output{background:var(--project-panel);border-color:var(--project-accent)}
+:is(#railway,#marine,#gatorplan) .deeper{border-color:var(--project-line)}
+:is(#railway,#marine,#gatorplan) .deeper>summary{color:var(--project-accent)}
+#railway :is(.agent-crew,.cloud-caption,.workshop-status){background:#241e38;border-color:#6d5a94}
+#railway .dataset-modes button{background:#3c3055;border-color:#8e76b5;color:#eee2ff}
+#railway .dataset-modes button[aria-pressed=true]{background:#d1b5ff;color:#241735;border-color:#d1b5ff}
+#railway .agent-station.finished{background:#3b3051;border-color:#9d82c7}
+#railway .modality-strip b{color:#d1b5ff}
+#marine .marine-tool-switch{border-color:#8b7048}
+#marine .marine-tool-switch button{background:#352b20;border-color:#8b7048;color:#d8c9b0}
+#marine .marine-tool-switch button[aria-expanded=true]{background:#51402a;color:#ffe1ab;box-shadow:inset 0 -3px #f0cb87}
+#marine .marine-tool-switch button:hover{background:#5a462c;color:#fff0d5}
+#marine .marine-tool-panel .tool-ownership{color:#e0d1b9}
+#gatorplan .product-snapshot{border-color:#477b9e}
+#gatorplan .product-snapshot figcaption{background:#173b59;color:#bcd6e9}
+#gatorplan .product-snapshot figcaption a{color:#a3d9ff}
+@media(max-width:650px){:is(#railway,#marine,#gatorplan){padding:20px 14px;border-left-width:4px;margin-bottom:20px}}

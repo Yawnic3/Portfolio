@@ -29,4 +29,6 @@ The scene and CAD workshops are browser visualizations of the engineering workfl
 
 Serve the `dist` directory as a static website. The `.openai/hosting.json` manifest retains the existing Sites deployment configuration.
 
+Vercel uses `vercel.json` to publish `dist` without an install or build step. Import the repository with its root directory left at the repository root; pushes to `main` trigger deployment.
+
 Technology logos identify their respective products. Devicon and Pixelify font license files are included beside the assets. Company logos and screenshots are used to identify the projects and internship.

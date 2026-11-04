@@ -87,3 +87,5 @@
 
 /* Jointed running cycle: planted push-off, bent-knee recovery. */
 .runner-body,.runner-leg-one,.runner-leg-two,.runner-leg-one path,.runner-leg-two path,.runner-arm-one,.runner-arm-two{animation:none!important;transform:none!important}.runner-leg-two path,.runner-arm-two path{stroke:#7ba99d}.runner-leg-one path,.runner-arm-one path{stroke:#e1f3e9}.runner-body .gym-person{stroke-width:7;stroke-linejoin:round;stroke-linecap:round}
+
+.runner-body{transform:rotate(5deg)!important;transform-origin:239px 151px}.track-marks{animation-duration:.34s}

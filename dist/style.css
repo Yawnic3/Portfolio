@@ -84,3 +84,6 @@
 
 /* Each foot cycles through reach, plant, push-off, and knee recovery. */
 .runner-leg-one,.runner-leg-two{animation:none;transform:none}.runner-leg-one path{animation:running-step .9s linear infinite}.runner-leg-two path{animation:running-step .9s linear infinite;animation-delay:-.45s}.runner-arm-one{animation:runner-arms .9s ease-in-out infinite}.runner-arm-two{animation:runner-arms .9s ease-in-out infinite;animation-delay:-.45s}.runner-body{animation:runner-bounce .9s ease-in-out infinite}@keyframes running-step{0%,100%{d:path('M239 151L268 179 256 216 272 221')}25%{d:path('M239 151L260 201 273 246 290 246')}50%{d:path('M239 151L221 200 190 240 174 240')}75%{d:path('M239 151L213 184 236 199 251 196')}}
+
+/* Jointed running cycle: planted push-off, bent-knee recovery. */
+.runner-body,.runner-leg-one,.runner-leg-two,.runner-leg-one path,.runner-leg-two path,.runner-arm-one,.runner-arm-two{animation:none!important;transform:none!important}.runner-leg-two path,.runner-arm-two path{stroke:#7ba99d}.runner-leg-one path,.runner-arm-one path{stroke:#e1f3e9}.runner-body .gym-person{stroke-width:7;stroke-linejoin:round;stroke-linecap:round}

@@ -71,3 +71,5 @@
 #gatorplan .product-snapshot figcaption{background:#173b59;color:#bcd6e9}
 #gatorplan .product-snapshot figcaption a{color:#a3d9ff}
 @media(max-width:650px){:is(#railway,#marine,#gatorplan){padding:20px 14px;border-left-width:4px;margin-bottom:20px}}
+
+.gatorplan-demo video{display:block;width:100%;height:auto;aspect-ratio:80/39;background:#08111e;object-fit:contain}

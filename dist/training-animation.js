@@ -11,5 +11,5 @@ const stride=[
 function pose(t){for(let i=0;i<2;i++){const phase=(t+i*.5)%1,step=phase*stride.length,k=Math.floor(step),q=step-k,a=stride[k],b=stride[(k+1)%stride.length],v=a.map((n,index)=>n+(b[index]-n)*q);const [kx,ky,x,y]=v;legs[i].setAttribute('d','M239 151 L'+kx+' '+ky+' L'+x+' '+y+' l12 2');
 const swing=Math.sin((t+i*.5)*Math.PI*2),ex=250-24*swing,ey=131;arms[i].setAttribute('d','M250 108 L'+ex+' '+ey+' L'+(ex+21)+' '+(ey-20));
 }}
-pose(.08);function frame(now){if(last&&!paused)elapsed+=Math.min(now-last,40);last=now;if(!paused)pose((elapsed/680)%1);requestAnimationFrame(frame)}requestAnimationFrame(frame);
+pose(.08);function frame(now){if(last&&!paused)elapsed+=Math.min(now-last,40);last=now;if(!paused)pose((elapsed/1100)%1);requestAnimationFrame(frame)}requestAnimationFrame(frame);
 })();

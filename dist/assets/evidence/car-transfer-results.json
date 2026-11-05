@@ -1,0 +1,44 @@
+{
+  "metric": "Single-class Car AP101 at full 3D IoU; custom evaluator, not an official leaderboard metric",
+  "evaluation_status": "Development only; ten consecutive original OSDaR23 frames, thirty boxes of three cars",
+  "training_examples": "Blender only; all CenterPoint runs initialized randomly; verifier fits synthetic training only",
+  "recipe_selected_on_real_development": true,
+  "results": {
+    "raw_intensity": {
+      "ap_all_point": 0.1273008082137276,
+      "ap101": 0.12708084234658656,
+      "max_recall": 0.6666666666666666,
+      "ground_truth_boxes": 30
+    },
+    "constant_intensity": {
+      "ap_all_point": 0.22988347414136992,
+      "ap101": 0.23057344371925464,
+      "max_recall": 0.6666666666666666,
+      "ground_truth_boxes": 30
+    },
+    "combined_pipeline": {
+      "ap_all_point": 0.5188165981487997,
+      "ap101": 0.5188812608604503,
+      "max_recall": 0.6666666666666666,
+      "ground_truth_boxes": 30
+    }
+  },
+  "pipeline": {
+    "constant_intensity": 30,
+    "temporal_window": 3,
+    "temporal_method": "mean",
+    "future_frames_used": false
+  },
+  "limitations": [
+    "Distant car still missed; maximum recall 20/30",
+    "Selected recipe scores zero at IoU 0.7 on original real sample",
+    "Zero AP on newer merged-sensor sequence 19",
+    "No independent real test recording evaluated"
+  ],
+  "provenance": {
+    "summary": "bridge_experiment_summary.json",
+    "intensity_experiment": "feature_probe.json",
+    "selected_result": "final_temporal_real.json",
+    "artifact_scope": "Selected fields from original local evaluation reports; filesystem paths removed. The reported 95% real-trained reference is not established by these files."
+  }
+}

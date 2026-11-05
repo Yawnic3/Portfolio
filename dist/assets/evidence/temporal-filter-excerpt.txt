@@ -1,0 +1,13 @@
+Source: synthetic_railway/temporal_confidence.py
+Class: CausalConfidenceFilter
+Method: update
+Selected pipeline: window=3, method='mean'
+
+The filter associates current detections with prior tracks and accumulates confidence history.
+The original statement supports either a median or mean; the selected evaluation uses mean.
+
+Original excerpt:
+history.append(float(score))
+if len(history)==self.window:output[index]=float(np.median(history) if self.method=='median' else np.mean(history))
+
+No future frames are used. Original local evaluation reports identify these results as development measurements, not independent tests.

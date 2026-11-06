@@ -151,3 +151,7 @@
 .project-stage .problem-solution p{font-size:20px}
 @media(max-width:850px){.projects-viewer{grid-template-columns:1fr}.project-sidebar{position:static;padding:14px}.viewer-label{margin:0 0 12px}.project-sidebar [role=tablist]{flex-direction:row}.project-sidebar button{flex:1;min-width:0;padding:12px 8px;gap:7px}.project-sidebar button strong{font-size:15px}.project-sidebar button small{font-size:13px}.viewer-arrow{display:none}.project-stage{border-left:0;border-top:1px solid #355167}.project-stage>.case-study{padding:20px}}
 @media(max-width:500px){.project-sidebar button{flex-direction:column}.project-sidebar button small{display:none}.project-sidebar button strong{margin:0;font-size:14px}.project-stage>.case-study{padding:15px}.project-stage .problem-solution p{font-size:18px}}
+.project-sidebar button[data-project=noteshare]{--tab-color:#8fe2ce}
+.project-sidebar button[data-project=chompchange]{--tab-color:#f2b8d4}
+@media(max-width:850px){.project-sidebar [role=tablist]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.project-sidebar button{height:100%}}
+@media(max-width:500px){.project-sidebar [role=tablist]{grid-template-columns:repeat(2,minmax(0,1fr))}.project-sidebar button{flex-direction:row;align-items:center}}
